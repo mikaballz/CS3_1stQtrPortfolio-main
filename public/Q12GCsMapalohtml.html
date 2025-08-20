@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
 <body> 
-    <h2>Sample use of the input tag</h2>
+    <h2> Q1 3rd Graded Exercise submitted by Mikaela Isabella Mapalo of 9-Cesium </h2>
+
     <label> Meal Price:
-        <input id= "mp" />
+        <input id="mp" />
     </label><br/>
+
     <label> Tip:
-        <input id="tip" /><br/>
-    <label> Service Charge:
-        <input id="sc" /><br/>
+        <input id="tip" />
+    </label><br/>
 
-    </label>
-    <button onclick="totalmeal()"> Accept Input </button> </p>
+    <label> Service Charge (%):
+        <input id="sc" />
+    </label><br/><br/>
 
+    <button onclick="totalMeal()"> Accept Input </button>
+
+    <p id="result"> Total Meal: </p>
+
+    <script>
+        function totalMeal() {
+            let mp = parseFloat(document.getElementById("mp").value);
+            let tip = parseFloat(document.getElementById("tip").value);
+            let sc = parseFloat(document.getElementById("sc").value);
+
+            let totalCost = mp + tip + (sc / 100 * mp);
+            document.getElementById("result").innerHTML = "Total Meal: " + totalCost.toFixed(2);
+        }
     </script>
 
 </body>
