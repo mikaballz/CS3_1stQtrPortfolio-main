@@ -1,0 +1,12 @@
+<script>
+
+let name = window.prompt("Enter the name of your favorite person ", "Daenarys Targaryen");
+let sure = window.confirm('Is $(name) really your favorite person?')
+if (sure) {
+    console.log("Move on dude")
+}
+else {
+    console.log(lol gfu)
+}
+
+</script>
