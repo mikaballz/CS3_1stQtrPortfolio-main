@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Third Graded Exercise</title>
+    </head>>
+    <body>
+
+        <h2> Q1 3rd Graded Exercise submitted by Mika Mapalo of 9 Cesium</h2>
+
+        <p>Guess a number between 1 and 100:</p>
+        <input type=":number" id="userGuess" placeholder="Enter a number">
+        <button onclick="checkIt()">Check</button>
+
+        <p id="result"></p>
+
+        <script>
+
+            var dNumber = Math.floor(Math.random() * 100) + 1;
+
+            function checkIt(){
+                var userInput = document.getElementById("userGuess").value;
+                var guess = Number(userInput);
+
+                if (guess > dNumber){
+                    document.getElementById("result").innerText = "Lower";
+                } else if (guess < dNumber){
+                    document.getElementById("result").innerText = "Higher";
+                } else if (guess === dNumber){
+                    document.getElementById("result").innerText = "You are correct!";
+                } else {
+                    document.getElementById("result").innerText = "Please enter a valid number.";
+                }
+            }
+        </script>
+    </body>
+</html>
